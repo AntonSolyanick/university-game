@@ -1,0 +1,18 @@
+{
+  "type": "module",
+  "name": "university-game",
+  "version": "1.0.0",
+  "scripts": {
+    "start": "parcel index.html --open --port 3000",
+    "build": "parcel build index.html  --public-url ./"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "cssnano": "^7.0.6",
+    "parcel": "^2.0.0",
+    "parcel-reporter-static-files-copy": "^1.5.3",
+    "postcss": "^8.5.3"
+  }
+}

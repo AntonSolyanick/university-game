@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>University Game</title>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1"
+    />
+    <link rel="stylesheet" href="src/styles.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat&family=Poppins&family=Roboto&display=swap"
+      rel="stylesheet"
+    />
+    <script type="module" async="false" src="src/script.js"></script>
+  </head>
+  <body>
+    <div id="modal" class="modal hide"></div>
+    <main>
+      <div class="map-container">
+        <object id="background" data="src/assets/background.jpg"></object>
+        <object
+          id="path"
+          type="image/svg+xml"
+          data="./src/assets/path.svg"
+        ></object>
+          <object
+          id="student-and-dots"
+          type="image/svg+xml"
+          data="./src/assets/student-and-dots.svg"
+        ></object>
+        </span>
+        <menu class="menu-container">
+          <div id="friendsBlock" class="friends-block">
+           
+            <img
+            src="./src/assets/friends-block.svg"
+            alt="friends-block"
+            />
+            <button id="leftButtonCarousel"  >
+              <img  class="arrow left-arrow"  src="./src/assets/arrow-button.svg"
+              alt="friends-block">
+            </button>
+            <button id="rightButtonCarousel"  >
+              <img class="arrow right-arrow"  src="./src/assets/arrow-button.svg"
+              alt="friends-block">
+            </button>
+            <div id="friendsCarouselItems" class="friends-block-carousel"></div>
+          </div>
+          <button >
+            <img
+            src="./src/assets/chat-button.svg"
+            alt="chat button"
+            />
+          </button>
+          <button id="inUniversity">
+            <img
+            src="./src/assets/in-university-button.svg"
+            alt="in university button"
+            />
+          </button>
+          <button>
+            <img
+            src="./src/assets/mail-button.svg"
+            alt="mail button"
+            />
+          </button>
+          <button id="ratingButton" >
+            <img 
+            src="./src/assets/rating-button.svg"
+            alt="rating button"
+            />
+          </button>
+        </menu>
+       
+        <div id="ratingBlock" class="rating-block">
+          <button id="closeButton" class="close-button">
+            <img src="./src/assets/close-button.svg" alt="close button">
+          </button>
+          <h2 class="rating-heading">Рейтинг игроков</h2>
+            <ul id="ratingTable" class="rating-table">
+            </ul>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
