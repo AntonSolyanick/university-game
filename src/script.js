@@ -28,7 +28,7 @@ closeButton.addEventListener("click", hideRatingBlock);
 ratingButton.addEventListener("click", showRatingBlock);
 
 //--------------------------------MOVE-STUDENT----------------------------------
-
+const buttonInUniversity = document.getElementById("inUniversity");
 const OFFSET_X = 2;
 const OFFSET_Y = 64;
 let currentStudentPosition = 1;
@@ -36,8 +36,8 @@ const sortedRatingList = data.rating.sort((a, b) => b.points - a.points);
 
 window.addEventListener("load", () => {
   const mainSVG = document.getElementById("student-and-dots");
-  const student = mainSVG.contentDocument.querySelector("#student");
-  const dots = mainSVG.contentDocument.querySelector("#dots");
+  const student = mainSVG.contentDocument.getElementById("student");
+  const dots = mainSVG.contentDocument.getElementById("dots");
   const dotsTotalCount = dots.children.length;
 
   const moveStudent = () => {
@@ -45,6 +45,7 @@ window.addEventListener("load", () => {
       alert("Победа! Обновите страницу для перезапуска игры.");
       return;
     }
+
     currentStudentPosition++;
 
     const currentDot = dots.querySelector(
@@ -82,9 +83,12 @@ window.addEventListener("load", () => {
       }
     }
     requestAnimationFrame(step);
+    buttonInUniversity.disabled = true;
+    setTimeout(() => {
+      buttonInUniversity.disabled = false;
+    }, duration);
   };
 
-  const buttonInUniversity = document.getElementById("inUniversity");
   buttonInUniversity.addEventListener("click", moveStudent);
 
   const ratingTable = document.getElementById("ratingTable");
